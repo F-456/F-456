@@ -16,4 +16,13 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
+          base: header
+          extras_css: |
+            h2 {
+              color: red;
+            }
+          plugin_isocalendar: yes
+          plugin_languages: yes
+          config_timezone: Asia/Kuala_Lumpur
+          config_order: base.header, isocalendar, languages
           token: ${{ secrets.METRICS }}
